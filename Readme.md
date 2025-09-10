@@ -17,7 +17,7 @@ Key features: username-based login, timezone-aware scheduling (08:00–17:00), a
 ## My Repository Structure
 - [Setup](Main) → Setup guide & main documentation (XAMPP & DATABASE) 
 - [Documentation](Dokumentasi) → Screenshots of the web application (UI PREVIEW)
-- [Project](Projek) → Web application source code (PHP + CSS)  
+- [Source Code](Projek) → Web application source code (PHP + CSS)  
 - [API](Api) → API endpoints (PHP)
 
 ----
