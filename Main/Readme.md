@@ -62,5 +62,34 @@ FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 -- Hasil Setelah Setting Database
 <img width="940" height="502" alt="image" src="https://github.com/user-attachments/assets/68c2170d-0e6f-43ce-9c8a-bde6811e566e" />
 
+------
+Setup Relasi
+<img width="1758" height="624" alt="image" src="https://github.com/user-attachments/assets/20efdb33-0694-4366-bb06-74be23c7ca35" />
+
+Query :
+Relasi 1: appointments.creator_id -> users.id
+ALTER TABLE appointments
+ADD CONSTRAINT fk_appointments_creator
+FOREIGN KEY (creator_id)
+REFERENCES users(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+Relasi 2: appointment_participants.user_id -> users.id
+ALTER TABLE appointment_participants
+ADD CONSTRAINT fk_participants_user
+FOREIGN KEY (user_id)
+REFERENCES users(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+Relasi 3: appointment_participants.appointment_id -> appointments.id
+ALTER TABLE appointment_participants
+ADD CONSTRAINT fk_participants_appointment
+FOREIGN KEY (appointment_id)
+REFERENCES appointments(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
 
 
