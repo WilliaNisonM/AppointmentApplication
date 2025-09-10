@@ -1,0 +1,115 @@
+/* Atur tampilan dasar body */
+body {
+  font-family: Arial, sans-serif; /* font bawaan */
+  background: #f7f9fb;            /* warna abu terang */
+  margin: 0;
+  padding: 20px;
+}
+
+/* Bungkus konten biar ketengah */
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Desain card/kotak putih untuk form & konten */
+.card {
+  background: #fff;
+  border-radius: 8px;                  /* sudut agak bulat */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* efek bayangan tipis */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Baris khusus untuk input jam */
+.time-row {
+  display: flex;
+  gap: 20px; /* jarak antar kolom */
+}
+.time-row div {
+  flex: 1; /* biar seimbang kiri-kanan */
+}
+
+/* Catatan kecil di bawah input */
+.note {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #555;
+}
+
+/* Judul */
+h1, h2 {
+  margin-top: 0;
+}
+
+/* Label form */
+label {
+  display:block;
+  margin-top:12px;
+  font-weight: bold;
+}
+
+/* Input, select, button biar seragam */
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Tombol utama */
+button {
+  background: #007bff;  /* biru */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;     /* animasi hover */
+}
+button:hover {
+  background: #0056b3;  /* biru lebih gelap saat hover */
+}
+
+/* Pesan error & sukses */
+.err {
+  color: #a00;  /* merah */
+  font-weight: bold;
+}
+.msg {
+  color: #080;  /* hijau */
+  font-weight: bold;
+}
+
+/* List appointment */
+ul {
+  list-style: none; /* hilangin bullet */
+  padding: 0;
+}
+ul li {
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background: #fafafa; /* abu muda */
+}
+
+/* Info user login di atas */
+.top-bar {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.top-bar strong {
+  color: #007bff; /* username ditonjolin biru */
+}
+
+/* Link logout */
+.logout-link {
+  margin-left: 10px;
+  color: #d00; /* merah biar jelas */
+  text-decoration: none;
+}
+.logout-link:hover {
+  text-decoration: underline;
+}

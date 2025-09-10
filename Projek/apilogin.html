@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test API Login</title>
+</head>
+<body>
+  <h1>Cek API via Login by Browser</h1>
+
+  <form id="loginForm">
+    <label>Username</label><br>
+    <input type="text" id="username" required><br><br>
+
+    <label>Name</label><br>
+    <input type="text" id="name"><br><br>
+
+    <label>Preferred Timezone</label><br>
+    <select id="tz">
+      <option>Asia/Jakarta</option>
+      <option>UTC</option>
+      <option>Europe/London</option>
+      <option>America/New_York</option>
+    </select><br><br>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <h2>Result</h2>
+  <pre id="output"></pre>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = {
+        username: document.getElementById("username").value,
+        name: document.getElementById("name").value,
+        preferred_timezone: document.getElementById("tz").value
+      };
+
+      try {
+        const res = await fetch("api/login.php", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(data)
+        });
+        const text = await res.text();
+        document.getElementById("output").textContent = text;
+      } catch (err) {
+        document.getElementById("output").textContent = "Error: " + err;
+      }
+    });
+  </script>
+</body>
+</html>
+
